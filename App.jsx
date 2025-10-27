@@ -50,7 +50,7 @@ const App = () => {
       alert('Please enter a valid 10-digit phone number');
       return;
     }
-    if (authForm.phone === 'admin' && authForm.password === 'admin123') {
+    if (authForm.phone === '9821072912' && authForm.password === 'admin123') {
       setIsAdmin(true);
       setUser({ name: 'Admin', phone: 'admin', role: 'admin' });
       setCurrentPage('admin');
