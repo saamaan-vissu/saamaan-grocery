@@ -46,11 +46,11 @@ const App = () => {
 
   const handleAuth = (e) => {
     e.preventDefault();
-    if (authForm.phone !== 'admin' && authForm.phone.length !== 10) {
+    if (authForm.phone !== '9821072912' && authForm.phone.length !== 10) {
       alert('Please enter a valid 10-digit phone number');
       return;
     }
-    if (authForm.phone === '9821072912' && authForm.password === 'admin123') {
+    if (authForm.phone === '9821072912' && authForm.password === 'ovs123') {
       setIsAdmin(true);
       setUser({ name: 'Admin', phone: 'admin', role: 'admin' });
       setCurrentPage('admin');
@@ -1074,7 +1074,7 @@ const AuthModal = () => (
           )}
           <div>
             <label className="block text-sm font-bold mb-1">Phone Number (10 digits) *</label>
-            <input type="text" required value={authForm.phone} onChange={(e) => handleAuthInputChange('phone', e.target.value.replace(/\D/g, '').slice(0, 10))} className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="9821072912" maxLength="10" />
+            <input type="text" required value={authForm.phone} onChange={(e) => handleAuthInputChange('phone', e.target.value.replace(/\D/g, '').slice(0, 10))} className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="9xxxxxxxxx" maxLength="10" />
             {authForm.phone && authForm.phone !== 'admin' && authForm.phone.length !== 10 && (
               <p className="text-xs text-red-500 mt-1">Please enter exactly 10 digits</p>
             )}
